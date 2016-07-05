@@ -4,7 +4,7 @@ PATH
     markdown-table-formatter (1.0.0)
 
 GEM
-  remote: https://ruby.taobao.org/
+  remote: https://rubygems.org/
   specs:
     minitest (5.9.0)
     rake (11.2.2)
