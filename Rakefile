@@ -10,5 +10,5 @@ task :run do
 end
 
 task :test do
-  bundle exec ruby test/test.rb
+  sh "bundle exec ruby test/test.rb"
 end

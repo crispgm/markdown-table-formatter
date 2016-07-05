@@ -1,0 +1,22 @@
+PATH
+  remote: .
+  specs:
+    markdown-table-formatter (1.0.0)
+
+GEM
+  remote: https://ruby.taobao.org/
+  specs:
+    minitest (5.9.0)
+    rake (11.2.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  bundler (~> 1.6)
+  markdown-table-formatter!
+  minitest
+  rake
+
+BUNDLED WITH
+   1.12.5

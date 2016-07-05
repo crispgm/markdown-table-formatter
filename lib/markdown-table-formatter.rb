@@ -1,10 +1,12 @@
 class MarkdownTableFormatter
   
-  attr_reader :all_rows, :column_width
+  attr_reader :all_rows, :column_width, :result
 
   def initialize(input)
-    linenum = 0
+    @result = ""
     @all_rows = Array.new(input.split("\n").size)
+
+    linenum = 0
     input.each_line do |line|
       if linenum == 1
         if !valid_seperator(line)
@@ -43,25 +45,29 @@ class MarkdownTableFormatter
   def format
     linenum = 0
     @all_rows.each do |row|
-      print "|"
+      @result << "|"
       if linenum == 1
         @column_width.each do |col|
-          print "-" * (col + 2)
-          print "|"
+          @result << "-" * (col + 2)
+          @result << "|"
         end
       else
         col_num = 0
         row.each do |item|
-          print " "
-          print item
-          print " " * (@column_width[col_num] - view_size(item))
-          print " |"
+          @result << " "
+          @result << item
+          @result << " " * (@column_width[col_num] - view_size(item))
+          @result << " |"
           col_num = col_num + 1
         end
       end
-      print "\n"
+      @result << "\n"
       linenum = linenum + 1
     end
+  end
+
+  def output
+    print @result
   end
 
   def valid_line(line)
