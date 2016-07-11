@@ -3,6 +3,10 @@ class MarkdownTableFormatter
   attr_reader :all_rows, :column_width, :result
 
   def initialize(input)
+    attach(input)
+  end
+
+  def attach(input)
     @result = ""
     @all_rows = Array.new(input.split("\n").size)
 
