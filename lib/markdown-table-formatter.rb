@@ -7,7 +7,8 @@ class MarkdownTableFormatter
     @all_rows = Array.new(input.split("\n").size)
 
     linenum = 0
-    input.strip!.each_line do |line|
+    input.strip!
+    input.each_line do |line|
       if linenum == 1
         if !valid_seperator(line)
           puts "Invalid Seperator: #{line}"
