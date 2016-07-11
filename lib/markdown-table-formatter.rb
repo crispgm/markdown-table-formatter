@@ -40,6 +40,8 @@ class MarkdownTableFormatter
 
   def format
     linenum = 0
+    @result = ""
+    
     @all_rows.each do |row|
       @result << "|"
       if linenum == 1
@@ -67,7 +69,7 @@ class MarkdownTableFormatter
   end
 
   private
-  
+
   def view_size(item)
     (item.bytesize - item.size) / 2 + item.size
   end
