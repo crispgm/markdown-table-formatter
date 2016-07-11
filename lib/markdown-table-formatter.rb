@@ -2,7 +2,7 @@ class MarkdownTableFormatter
   
   attr_reader :all_rows, :column_width, :result
 
-  def initialize(input)
+  def initialize(input = "")
     attach(input)
   end
 
@@ -16,11 +16,15 @@ class MarkdownTableFormatter
       if linenum == 1
         if !valid_seperator(line)
           puts "Invalid Seperator: #{line}"
-          exit(1)
+          return false
         end
       else
         if valid_line(line)
           @all_rows[linenum] = fetch_line_section(line)
+          if (@all_rows[linenum].size != @all_rows[0].size)
+            puts "Elements num mismatch with table head"
+            return false
+          end
           if linenum == 0
             @column_width = Array.new(@all_rows[linenum].size) do |item|
               item = 0
@@ -35,7 +39,7 @@ class MarkdownTableFormatter
           end
         else
           puts "Invalid Line: #{line}"
-          exit(1)
+          return false
         end
       end  
     
