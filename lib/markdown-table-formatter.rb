@@ -38,10 +38,6 @@ class MarkdownTableFormatter
     end
   end
 
-  def view_size(item)
-    (item.bytesize - item.size) / 2 + item.size
-  end
-
   def format
     linenum = 0
     @all_rows.each do |row|
@@ -70,16 +66,26 @@ class MarkdownTableFormatter
     print @result
   end
 
-  def valid_line(line)
-    return true if /^(\|(.)*)*\|$/.match(line) != nil
+  private
+  
+  def view_size(item)
+    (item.bytesize - item.size) / 2 + item.size
+  end
 
-    false
+  def valid_line(line)
+    if /^(\|(.)*)*\|$/.match(line) != nil
+      true
+    else
+      false
+    end
   end
 
   def valid_seperator(line)
-    return true if /^(\|(\-)*)*\|$/.match(line) != nil
-
-    false
+    if /^(\|(\-)*)*\|$/.match(line) != nil
+      true
+    else
+      false
+    end
   end
 
   def fetch_line_section(line)
