@@ -2,6 +2,7 @@
 
 ![](https://img.shields.io/badge/license-MIT-blue.svg)
 ![](https://travis-ci.org/crispgm/markdown-table-formatter.svg)
+[![Code Climate](https://codeclimate.com/github/crispgm/markdown-table-formatter/badges/gpa.svg)](https://codeclimate.com/github/crispgm/markdown-table-formatter)
 
 Format tables in GitHub Flavored Markdown
 
