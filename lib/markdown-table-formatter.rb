@@ -26,17 +26,9 @@ class MarkdownTableFormatter
             return false
           end
           if linenum == 0
-            @column_width = Array.new(@all_rows[linenum].size) do |item|
-              item = 0
-            end
+            @column_width = init_column_width(linenum)
           end
-          item_index = 0
-          @all_rows[linenum].each do |item|
-            if view_size(item) > @column_width[item_index]
-              @column_width[item_index] = view_size(item)
-            end
-            item_index = item_index + 1
-          end
+          calc_column_width(linenum)
         else
           puts "Invalid Line: #{line}"
           return false
@@ -78,6 +70,22 @@ class MarkdownTableFormatter
   end
 
   private
+
+  def init_column_width(linenum)
+    Array.new(@all_rows[linenum].size) do |item|
+      item = 0
+    end
+  end
+
+  def calc_column_width(linenum)
+    item_index = 0
+    @all_rows[linenum].each do |item|
+      if view_size(item) > @column_width[item_index]
+        @column_width[item_index] = view_size(item)
+      end
+      item_index = item_index + 1
+    end
+  end
 
   def view_size(item)
     (item.bytesize - item.size) / 2 + item.size

@@ -1,14 +1,10 @@
 # coding: utf-8
-task default: %w[run]
+task default: %w[test]
 
-task :init do
-  sh "bundle install"
-end
+require 'rake/testtask'
 
-task :run do
-  sh "cat test/test_input.md | bundle exec bin/markdown-table-formatter"
-end
-
-task :test do
-  sh "bundle exec ruby test/test.rb"
+Rake::TestTask.new do |t|
+  t.libs << 'lib' << 'test'
+  t.test_files = FileList['test/test_*.rb']
+  t.verbose = true
 end

@@ -1,13 +1,30 @@
+PATH
+  remote: .
+  specs:
+    markdown-table-formatter (1.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    codeclimate-test-reporter (0.6.0)
+      simplecov (>= 0.7.1, < 1.0.0)
+    docile (1.1.5)
+    json (1.8.3)
     minitest (5.9.0)
     rake (11.2.2)
+    simplecov (0.12.0)
+      docile (~> 1.1.0)
+      json (>= 1.8, < 3)
+      simplecov-html (~> 0.10.0)
+    simplecov-html (0.10.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
+  bundler (~> 1.6)
+  codeclimate-test-reporter
+  markdown-table-formatter!
   minitest
   rake
 

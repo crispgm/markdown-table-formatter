@@ -1,5 +1,7 @@
-require "minitest/autorun"
+require_relative "helper"
 require_relative "../lib/markdown-table-formatter"
+
+require "minitest/autorun"
 
 class TestFmt < Minitest::Test
   def setup
