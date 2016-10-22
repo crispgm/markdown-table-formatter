@@ -1,0 +1,40 @@
+install: |
+    ## Install with RubyGems
+
+    ```shell
+    $ gem install markdown-table-formatter
+    ```
+
+    ## Or, you may install manually
+
+    ```
+    $ git clone https://github.com/crispgm/markdown-table-formatter.git
+    $ bundle install
+    ```
+guide: |
+    ## Run
+
+    ```
+    $ echo "|key|value|
+    |-|-|
+    |David|Zhang|
+    |Zhongbo|Li|
+    |Linus|Torvalds|
+    " | bundle exec bin/markdown-table-formatter
+    ```
+
+    ## Output
+
+    ```
+    | key     | value    |
+    |---------|----------|
+    | David   | Zhang    |
+    | Zhongbo | Li       |
+    | Linus   | Torvalds |
+    ```
+contrib: |
+    [Markdown Table Formatter](https://github.com/crispgm/markdown-table-formatter) is licensed under MIT License.
+
+    If there is a bug, you may [file an issue](https://github.com/crispgm/markdown-table-formatter/issues/new) or pull request directly.
+
+    Pull requests for contribution is welcomed.

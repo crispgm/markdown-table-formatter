@@ -9,7 +9,6 @@ Format tables in GitHub Flavored Markdown
 
 ## Usage
 
-
 1. Install
     
     ```
