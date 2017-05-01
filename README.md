@@ -19,11 +19,11 @@ Format tables in GitHub Flavored Markdown
 
     ```
     $ echo "|key|value|
-|-|-|
-|David|Zhang|
-|Zhongbo|Li|
-|Linus|Torvalds|
-" | bundle exec bin/markdown-table-formatter
+    |-|-|
+    |David|Zhang|
+    |Zhongbo|Li|
+    |Linus|Torvalds|
+    " | bundle exec bin/markdown-table-formatter
     ```
 
 3. Output
