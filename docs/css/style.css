@@ -37,6 +37,7 @@ pre.highlight {
   border-radius: .2rem;
   font-family: Menlo, Monaco, "Source Code Pro", Consolas, Courier;
   font-size: 1rem;
+  padding: .4rem;
 }
 code.hljs {
   padding: .8rem;
@@ -153,14 +154,14 @@ code.highlighter-rouge {
 }
 #social {
   text-align: center;
-  margin-top: 1rem;
+  margin: 1rem 0;
   padding-bottom: 1rem;
-  border-bottom: solid #aaa .1rem;
+  border-bottom: solid #aaa 1px;
 }
 .content {
   padding-top: 3rem;
   font-size: 1rem;
-  border-bottom: solid #aaa .1rem;
+  border-bottom: solid #aaa 1px;
   padding-bottom: 1.6rem;
 }
 .content-title {
