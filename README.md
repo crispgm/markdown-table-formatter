@@ -1,16 +1,15 @@
 # Markdown Table Formatter
 
-![](https://img.shields.io/badge/license-MIT-blue.svg)
-![](https://travis-ci.org/crispgm/markdown-table-formatter.svg)
-[![Code Climate](https://codeclimate.com/github/crispgm/markdown-table-formatter/badges/gpa.svg)](https://codeclimate.com/github/crispgm/markdown-table-formatter)
-[![Test Coverage](https://codeclimate.com/github/crispgm/markdown-table-formatter/badges/coverage.svg)](https://codeclimate.com/github/crispgm/markdown-table-formatter/coverage)
+![GitHub CI](https://github.com/crispgm/markdown-table-formatter/workflows/build/badge.svg)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e2e707a2174b3fd91fc0/maintainability)](https://codeclimate.com/github/crispgm/markdown-table-formatter/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/e2e707a2174b3fd91fc0/test_coverage)](https://codeclimate.com/github/crispgm/markdown-table-formatter/test_coverage)
 
 Format tables in GitHub Flavored Markdown
 
 ## Usage
 
 1. Install
-    
+
     ```
     $ bundle install
     ```
