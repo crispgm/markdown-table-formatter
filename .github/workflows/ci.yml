@@ -15,8 +15,9 @@ jobs:
     - name: 'Install Bundler 2'
       run: 'gem install bundler -v "2.0.1" --force'
     - run: 'bundle install'
-    - run: 'bundle exec rake test'
     - name: Test & publish code coverage
       uses: paambaati/codeclimate-action@v2.7.4
+      with:
+        coverageCommand: 'bundle exec rake test'
       env:
         CC_TEST_REPORTER_ID: ${{secrets.CC_TEST_REPORTER_ID}}
