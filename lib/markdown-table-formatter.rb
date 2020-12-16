@@ -1,5 +1,5 @@
 class MarkdownTableFormatter
-  
+
   attr_reader :all_rows, :column_width, :result
 
   def initialize(input = "")
@@ -33,8 +33,8 @@ class MarkdownTableFormatter
           puts "Invalid Line: #{line}"
           return false
         end
-      end  
-    
+      end
+
       linenum = linenum + 1
     end
   end
@@ -42,7 +42,7 @@ class MarkdownTableFormatter
   def format
     linenum = 0
     @result = ""
-    
+
     @all_rows.each do |row|
       @result << "|"
       if linenum == 1
